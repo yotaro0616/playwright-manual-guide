@@ -1,0 +1,9 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Generated content (user's work)
+exploration/
+docs/
+assets/
+screenshot.png
