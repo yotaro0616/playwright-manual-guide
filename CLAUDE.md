@@ -1,34 +1,35 @@
 # ドキュメント作成プロジェクト
 
+<!-- /setup を実行すると、以下のセクションが対話的に設定されます -->
+
 ## アプリ情報
 
-<!-- ここにあなたのアプリの情報を記載してください -->
-
-- URL: https://your-app.example.com/login
+- URL: （/setup で設定）
 - アカウント:
-  - メールアドレス: user@example.com
-  - パスワード: password123
+  - ロール名:
+    - メールアドレス:
+    - パスワード:
 
-<!-- 複数ロールがある場合は追加 -->
-<!-- - 管理者アカウント: -->
-<!--   - メールアドレス: admin@example.com -->
-<!--   - パスワード: admin123 -->
+## ロール
+
+- （/setup で設定）
 
 ## 安全制約
 
 - データの削除は行わない
 - 設定の変更は行わない
 
-## 成果物
+## 出力先
 
-| ファイル | 内容 |
-|---------|------|
-| `exploration/findings.md` | アプリ探索結果 |
-| `docs/` | 操作マニュアル |
-| `assets/` | スクリーンショット |
+| 成果物 | パス |
+|--------|------|
+| 探索結果 | exploration/findings.md |
+| マニュアル | docs/{role}/manual.md |
+| 画像 | assets/{role}/images/ |
 
 ## ワークフロー
 
-1. `/web-app-explorer` — アプリを探索して調査レポートを作成
-2. `/operation-manual-creator` — 調査結果からマニュアルを生成
-3. `/manual-screenshot-capture` — マニュアルの📸指示からスクショを自動撮影
+1. `/setup` — プロジェクトの初期設定（アプリ情報の記入）
+2. `/explore` — アプリを探索して調査レポートを作成
+3. `/create-manual` — 調査結果からマニュアルを生成
+4. `/capture-screenshots` — マニュアルの📸指示からスクリーンショットを自動撮影

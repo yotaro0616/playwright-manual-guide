@@ -11,16 +11,15 @@ Web アプリの操作マニュアルを作るのに、画面を1つずつ開い
 git clone https://github.com/yotaro0616/playwright-manual-guide.git
 cd playwright-manual-guide
 
-# 2. CLAUDE.md にあなたのアプリ情報を記入（URL、ログイン情報）
-
-# 3. Playwright MCP を登録
+# 2. Playwright MCP を登録
 claude mcp add playwright -- npx @playwright/mcp@latest
 
-# 4. Claude Code を起動して Skills を実行
+# 3. Claude Code を起動して 4 つの Skills を順に実行
 claude
-# → /web-app-explorer        （アプリを探索）
-# → /operation-manual-creator （マニュアルを生成）
-# → /manual-screenshot-capture（スクショを撮影）
+# → /setup                 （アプリ情報を設定）
+# → /explore               （アプリを探索）
+# → /create-manual          （マニュアルを生成）
+# → /capture-screenshots    （スクショを撮影）
 ```
 
 詳しい手順は[セクション一覧](#セクション一覧)を参照してください。
@@ -29,9 +28,10 @@ claude
 
 | 作業 | 使う Skill | やること |
 |------|-----------|---------|
-| **調査** | `/web-app-explorer` | Web アプリの画面・機能を AI が自動で巡回し、調査レポートを作成 |
-| **執筆** | `/operation-manual-creator` | 調査結果をもとに操作マニュアルを自動生成 |
-| **撮影** | `/manual-screenshot-capture` | マニュアルに必要なスクリーンショットを自動撮影・挿入 |
+| **設定** | `/setup` | CLAUDE.md にアプリ情報を設定し、プロジェクト構造を作成 |
+| **調査** | `/explore` | Web アプリの画面・機能を AI が自動で巡回し、調査レポートを作成 |
+| **執筆** | `/create-manual` | 調査結果をもとに操作マニュアルを自動生成 |
+| **撮影** | `/capture-screenshots` | マニュアルに必要なスクリーンショットを自動撮影・挿入 |
 
 ## 前提条件
 
@@ -51,11 +51,11 @@ claude
 ### 本題（セクション 4〜5）
 
 4. [MCP で Playwright に接続する](sections/04_MCPでPlaywrightに接続する.md) — ブラウザ自動操作の設定
-5. [Skills を使う](sections/05_Skillsを使う.md) — 3 つの Skills の確認と使い方
+5. [Skills を使う](sections/05_Skillsを使う.md) — 4 つの Skills の確認と使い方
 
 ### 実践（セクション 6〜8）
 
-6. [Web アプリを探索する](sections/06_Webアプリを探索する.md) — 調査スキルで Web アプリを自動調査
+6. [Web アプリを探索する](sections/06_Webアプリを探索する.md) — 初期設定と調査スキルの実践
 7. [操作マニュアルを作成する](sections/07_操作マニュアルを作成する.md) — 執筆スキルでマニュアルを自動生成
 8. [スクリーンショットを自動撮影する](sections/08_スクリーンショットを自動撮影する.md) — 撮影スキルでスクショを一括撮影
 
@@ -64,14 +64,15 @@ claude
 ```
 playwright-manual-guide/
 ├── README.md                  # このファイル
-├── CLAUDE.md                  # テンプレート（アプリ情報を記入して使う）
+├── CLAUDE.md                  # テンプレート（/setup で対話的に設定）
 ├── sections/                  # ガイド本文（セクション 1〜8）
 └── .claude/
     ├── settings.json
-    └── skills/                # 3 つの Skills（clone すれば即使える）
-        ├── web-app-explorer/SKILL.md
-        ├── operation-manual-creator/SKILL.md
-        └── manual-screenshot-capture/SKILL.md
+    └── skills/                # 4 つの Skills（clone すれば即使える）
+        ├── setup/SKILL.md
+        ├── explore/SKILL.md
+        ├── create-manual/SKILL.md
+        └── capture-screenshots/SKILL.md
 ```
 
 ## ライセンス
