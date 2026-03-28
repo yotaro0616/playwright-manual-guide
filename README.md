@@ -6,6 +6,8 @@ Web アプリの操作マニュアルを作るのに、画面を1つずつ開い
 
 ## クイックスタート
 
+> Claude Code、Node.js 18 以上が必要です。初めての方は[セクション 2](sections/02_Claude%20Codeの準備.md) から順に進めてください。
+
 ```bash
 # 1. リポジトリを clone
 git clone https://github.com/yotaro0616/playwright-manual-guide.git
@@ -21,8 +23,6 @@ claude
 # → /create-manual          （マニュアルを生成）
 # → /capture-screenshots    （スクショを撮影）
 ```
-
-詳しい手順は[セクション一覧](#セクション一覧)を参照してください。
 
 ## できるようになること
 

@@ -57,18 +57,36 @@ irm https://claude.ai/install.ps1 | iex
 
 このガイドのリポジトリには、ドキュメント作成に必要な Skills（AI への作業指示書）がすでに入っています。以下のコマンドでダウンロードしましょう。
 
+**Mac の場合:**
+
 ```bash
 git clone https://github.com/yotaro0616/playwright-manual-guide.git ~/Desktop/playwright-manual-guide
 ```
 
-これは「GitHub からリポジトリをダウンロードしてデスクトップに保存する」コマンドです。
+> ⚠️ `git` が使えないと言われた場合は、「インストールしますか？」というダイアログが表示されることがあります。「インストール」を選んで完了後、もう一度上のコマンドを実行してください。ダイアログが出ない場合は、ターミナルで `xcode-select --install` を実行してください。
 
-> ⚠️ Windows で `git` が使えない場合は、[git-scm.com](https://git-scm.com/downloads/win) から Git for Windows をインストールしてください。
+**Windows の場合:**
+
+```powershell
+git clone https://github.com/yotaro0616/playwright-manual-guide.git $HOME\Desktop\playwright-manual-guide
+```
+
+> ⚠️ `git` が使えない場合は、[git-scm.com](https://git-scm.com/downloads/win) から Git for Windows をインストールしてください。
+
+これは「GitHub からリポジトリをダウンロードしてデスクトップに保存する」コマンドです。
 
 次に、ダウンロードしたフォルダに移動します。
 
+**Mac の場合:**
+
 ```bash
 cd ~/Desktop/playwright-manual-guide
+```
+
+**Windows の場合:**
+
+```powershell
+cd $HOME\Desktop\playwright-manual-guide
 ```
 
 `cd` は「change directory（フォルダを移動する）」の略です。Claude Code は、このコマンドで移動した先のフォルダを作業場所として使います。
