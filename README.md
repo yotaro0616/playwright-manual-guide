@@ -55,9 +55,17 @@ claude
 
 ### 実践（セクション 6〜8）
 
-6. [Web アプリを探索する](sections/06_Webアプリを探索する.md) — 初期設定と調査スキルの実践
+6. [セットアップと探索](sections/06_Webアプリを探索する.md) — 初期設定と調査スキルの実践
 7. [操作マニュアルを作成する](sections/07_操作マニュアルを作成する.md) — 執筆スキルでマニュアルを自動生成
 8. [スクリーンショットを自動撮影する](sections/08_スクリーンショットを自動撮影する.md) — 撮影スキルでスクショを一括撮影
+
+## 完成例
+
+`examples/` ディレクトリに、実際に Skills を実行して生成した成果物のサンプルがあります。
+
+- [探索結果（findings.md）](examples/exploration/findings.md)
+- [操作マニュアル（manual.md）](examples/docs/user/manual.md)
+- [スクリーンショット](examples/assets/user/images/)
 
 ## リポジトリの構造
 

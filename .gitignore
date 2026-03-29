@@ -2,8 +2,8 @@
 .DS_Store
 Thumbs.db
 
-# Generated content (user's work)
-exploration/
-docs/
-assets/
-screenshot.png
+# Generated content (user's work, root level only)
+/exploration/
+/docs/
+/assets/
+/screenshot.png
