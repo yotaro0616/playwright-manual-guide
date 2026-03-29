@@ -59,14 +59,6 @@ claude
 7. [操作マニュアルを作成する](sections/07_操作マニュアルを作成する.md) — 執筆スキルでマニュアルを自動生成
 8. [スクリーンショットを自動撮影する](sections/08_スクリーンショットを自動撮影する.md) — 撮影スキルでスクショを一括撮影
 
-## 完成例
-
-`examples/` ディレクトリに、実際に Skills を実行して生成した成果物のサンプルがあります。
-
-- [探索結果（findings.md）](examples/exploration/findings.md)
-- [操作マニュアル（manual.md）](examples/docs/user/manual.md)
-- [スクリーンショット](examples/assets/user/images/)
-
 ## リポジトリの構造
 
 ```
